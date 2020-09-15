@@ -1,50 +1,43 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
   <div class="container">
-      <a class="navbar-brand" href="#">Finder</a>
-      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-          &#9776;
-      </button>
-      <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+    <a class="navbar-brand" href="#">Finder</a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+      &#9776;
+    </button>
+    <div class="collapse navbar-collapse" id="exCollapsingNavbar">
 
-          <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
-              <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
-              <li class="dropdown order-1">
-                  <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
-                  <ul class="dropdown-menu dropdown-menu-right mt-2">
-                     <li class="px-3 py-2">
-                         <form class="form" role="form">
-                              <div class="form-group">
-                                  <button type="submit" class="btn btn-danger btn-block">Entrar com gmail</button>
-                              </div>
-                          </form>
-                      </li>
-                  </ul>
-              </li>
+      <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+        <li class="dropdown order-1">
+          <button type="button" id="dropdownMenu1" data-toggle="dropdown"
+            class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
+          <ul class="dropdown-menu dropdown-menu-right mt-2">
+            <li class="px-3 py-2">
+              <form class="form" role="form">
+                <div class="form-group">
+                  <button type="submit" class="btn btn-danger btn-block">Entrar com gmail</button>
+                </div>
+              </form>
+            </li>
           </ul>
-      </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<div id="modalPassword" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h3>Forgot password</h3>
-              <button type="button" class="close font-weight-light" data-dismiss="modal" aria-hidden="true">×</button>
-          </div>
-          <div class="modal-body">
-              <p>Reset your password..</p>
-          </div>
-          <div class="modal-footer">
-              <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-              <button class="btn btn-primary">Save changes</button>
-          </div>
-      </div>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal">Finder</h1>
+    <p class="lead font-weight-normal">Busque abaixo erros diretamente no StackOverFlow</p>
+    <div class="input-group input-group-lg">
+        <input type="text" class="form-control " placeholder="Search for event, hotel, restaurant, job ... ">
+        <span class="input-group-btn">
+            <button class="btn btn-primary btn-lg" type="button">Search</button>
+        </span>
+    </div>   
   </div>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
 </div>
-
-<router-outlet></router-outlet>
-
-
 
 
