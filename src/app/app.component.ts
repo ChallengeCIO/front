@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { importExpr } from '@angular/compiler/src/output/output_ast';
+import { Component, OnInit } from '@angular/core';
+import { AppService } from './services/app.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'front-end';
+
+  constructor( private appService: AppService) {
+
+  }
+
+   message = ''
+   result = []
+   errorMsg: string;
+
+findError(){
+  this.appService.getStackoverflow(this.message).subscribe(
+    data => {
+      this.result = data;
+    },
+    error => this.errorMsg = error
+  );
+}
+
+
+ 
 }

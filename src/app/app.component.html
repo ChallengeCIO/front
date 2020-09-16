@@ -30,9 +30,9 @@
     <h1 class="display-4 font-weight-normal">Finder</h1>
     <p class="lead font-weight-normal">Busque abaixo erros diretamente no StackOverFlow</p>
     <div class="input-group input-group-lg">
-        <input type="text" class="form-control " placeholder="Cole aqui o erro do código ">
+        <input type="text" class="form-control"  [(ngModel)]="message" placeholder="Cole aqui o erro do código ">
         <span class="input-group-btn">
-            <button class="btn btn-primary btn-lg" type="button">Pesquisar</button>
+            <button class="btn btn-primary btn-lg" (click)="findError(message)" type="button">Pesquisar</button>
         </span>
     </div>   
   </div>
