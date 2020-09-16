@@ -16,11 +16,21 @@ export class AppComponent {
    message = ''
    result = []
    errorMsg: string;
+   loginStatus: any;
 
 findError(){
   this.appService.getStackoverflow(this.message).subscribe(
     data => {
       this.result = data;
+    },
+    error => this.errorMsg = error
+  );
+}
+
+login(){
+  this.appService.getOauth().subscribe(
+    data => {
+      this.loginStatus = data;
     },
     error => this.errorMsg = error
   );

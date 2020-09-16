@@ -28,5 +28,20 @@ export class AppService {
     });
 }
 
+getOauth(): Observable<any[]> {
+  return new Observable<any[]>(observer => {
+        this.http.get<any[]>(this._url + '/login-google').subscribe(
+          data => {
+            observer.next(data);
+            console.log(data)
+          },
+          error => {
+            let message = (error.error && error.error.message) ? error.error.message : 'No more details provided by backend';
+            observer.error(`Error fetching stimulus: ${error.message}. Details: ${message}`);
+          });
+
+  });
+}
+
   
 }
